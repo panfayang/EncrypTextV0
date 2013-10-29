@@ -22,6 +22,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.encryptextv0.EncrpytActivity"
+            android:label="@string/title_activity_encrpyt" >
+        </activity>
+        <activity
+            android:name="com.example.encryptextv0.EncryptActivity"
+            android:label="@string/title_activity_encrypt" >
+        </activity>
+        <activity
+            android:name="com.example.encryptextv0.DecryptActivity"
+            android:label="@string/title_activity_decrypt" >
+        </activity>
+        <activity
+            android:name="com.example.encryptextv0.ManageKeyActivity"
+            android:label="@string/title_activity_manage_key" >
+        </activity>
+        <activity
+            android:name="com.example.encryptextv0.ManageKeysActivity"
+            android:label="@string/title_activity_manage_keys" >
+        </activity>
+        <activity
+            android:name="com.example.encryptextv0.DecryptedActivity"
+            android:label="@string/title_activity_decrypted" >
+        </activity>
+        <activity
+            android:name="com.example.encryptextv0.EncryptedActivity"
+            android:label="@string/title_activity_encrypted" >
+        </activity>
     </application>
 
 </manifest>

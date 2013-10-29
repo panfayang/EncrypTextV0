@@ -1,8 +1,10 @@
 package com.example.encryptextv0;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 
 public class MainActivity extends Activity {
 
@@ -20,4 +22,18 @@ public class MainActivity extends Activity {
         return true;
     }
     
+    public void startEncryptActivity(View view) {
+    	Intent intent = new Intent(this, EncryptActivity.class);
+    	startActivity(intent);
+    }
+    
+    public void startDecryptActivity(View view) {
+    	Intent intent = new Intent(this, DecryptActivity.class);
+    	startActivity(intent);
+    }
+    
+    public void startManageKeysActivity(View view) {
+    	Intent intent = new Intent(this, ManageKeysActivity.class);
+    	startActivity(intent);
+    }
 }
