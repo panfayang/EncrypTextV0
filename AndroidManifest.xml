@@ -50,6 +50,18 @@
             android:name="com.example.encryptextv0.EncryptedActivity"
             android:label="@string/title_activity_encrypted" >
         </activity>
+        <activity
+            android:name="com.example.encryptextv0.Delete_Keys"
+            android:label="@string/title_activity_delete__keys" >
+        </activity>
+        <activity
+            android:name="com.example.encryptextv0.View_Keys"
+            android:label="@string/title_activity_view__keys" >
+        </activity>
+        <activity
+            android:name="com.example.encryptextv0.Enter_Key"
+            android:label="@string/title_activity_enter__key" >
+        </activity>
     </application>
 
 </manifest>
