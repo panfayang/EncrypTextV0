@@ -26,6 +26,11 @@ public final class R {
     public static final class id {
         public static final int Enter=0x7f080014;
         public static final int PasteEncrypted=0x7f080002;
+<<<<<<< HEAD
+        public static final int PasteNormal=0x7f080007;
+        public static final int action_settings=0x7f080011;
+        public static final int buttonDecrypt=0x7f08000c;
+=======
         public static final int PasteKey=0x7f080016;
         public static final int PasteKeyEdit=0x7f080018;
         public static final int PasteNormal=0x7f08000e;
@@ -33,6 +38,7 @@ public final class R {
         public static final int TableRow1=0x7f08001d;
         public static final int action_settings=0x7f080020;
         public static final int buttonDecrypt=0x7f08001a;
+>>>>>>> f647926d6a23f2a9de423a53043607d832809303
         public static final int buttonDoDecrypt=0x7f080001;
         public static final int buttonDoEncrypt=0x7f08000d;
         public static final int buttonEncrypt=0x7f080019;
@@ -43,6 +49,14 @@ public final class R {
         public static final int delete=0x7f08000b;
         public static final int deletePrompt=0x7f080007;
         public static final int editTextEncrypted=0x7f080000;
+<<<<<<< HEAD
+        public static final int editTextNormal=0x7f080005;
+        public static final int generateRandomKey=0x7f08000e;
+        public static final int storeKey=0x7f080010;
+        public static final int textViewDecrypted=0x7f080003;
+        public static final int textViewEncrypted=0x7f080008;
+        public static final int viewKeyTV=0x7f08000f;
+=======
         public static final int editTextNormal=0x7f08000c;
         public static final int enterDelete=0x7f080009;
         public static final int enterName=0x7f080013;
@@ -57,6 +71,7 @@ public final class R {
         public static final int textViewDecrypted=0x7f080003;
         public static final int textViewEncrypted=0x7f08000f;
         public static final int viewAll=0x7f08001e;
+>>>>>>> f647926d6a23f2a9de423a53043607d832809303
     }
     public static final class layout {
         public static final int activity_decrypt=0x7f030000;
@@ -95,6 +110,7 @@ public final class R {
         public static final int name=0x7f050013;
         public static final int ok=0x7f050015;
         public static final int paste=0x7f05000c;
+        public static final int store_key_button=0x7f050010;
         public static final int title_activity_decrypt=0x7f050004;
         public static final int title_activity_decrypted=0x7f05000a;
         public static final int title_activity_delete__keys=0x7f050011;

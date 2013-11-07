@@ -17,12 +17,20 @@
     <string name="copy_text">Copy Text</string>
     <string name="copy_key">Copy Key</string>
     <string name="generate_random_new_key">New Key</string>
+<<<<<<< HEAD
+    <string name="store_key_button">Store This Key!</string>
+=======
     <string name="title_activity_enter__key">Enter_Key</string>
     <string name="title_activity_delete__keys">Delete_Keys</string>
     <string name="title_activity_view__keys">View_Keys</string>
+<<<<<<< HEAD
     <string name="name">Name</string>
     <string name="enterSender">Enter name of sender</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
+=======
+    <string name="hello_world">Hello world!</string>
+>>>>>>> f647926d6a23f2a9de423a53043607d832809303
+>>>>>>> ab7b1a1286961b0711ba72c84dc84eaec44f5607
 
 </resources>
