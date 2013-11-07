@@ -20,6 +20,9 @@
     <string name="title_activity_enter__key">Enter_Key</string>
     <string name="title_activity_delete__keys">Delete_Keys</string>
     <string name="title_activity_view__keys">View_Keys</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="name">Name</string>
+    <string name="enterSender">Enter name of sender</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
 
 </resources>

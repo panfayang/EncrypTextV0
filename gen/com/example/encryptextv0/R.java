@@ -31,7 +31,7 @@ public final class R {
         public static final int PasteNormal=0x7f08000e;
         public static final int TableLayout1=0x7f080005;
         public static final int TableRow1=0x7f08001d;
-        public static final int action_settings=0x7f08001f;
+        public static final int action_settings=0x7f080020;
         public static final int buttonDecrypt=0x7f08001a;
         public static final int buttonDoDecrypt=0x7f080001;
         public static final int buttonDoEncrypt=0x7f08000d;
@@ -46,6 +46,7 @@ public final class R {
         public static final int editTextNormal=0x7f08000c;
         public static final int enterDelete=0x7f080009;
         public static final int enterName=0x7f080013;
+        public static final int enterNameText=0x7f08001f;
         public static final int generateRandomKey=0x7f08001c;
         public static final int name=0x7f080012;
         public static final int tableRow1=0x7f080006;
@@ -67,6 +68,7 @@ public final class R {
         public static final int activity_main=0x7f030006;
         public static final int activity_manage_keys=0x7f030007;
         public static final int activity_view__keys=0x7f030008;
+        public static final int dialog_enter_name=0x7f030009;
     }
     public static final class menu {
         public static final int decrypt=0x7f070000;
@@ -82,13 +84,16 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
+        public static final int cancel=0x7f050016;
         public static final int copy_key=0x7f05000e;
         public static final int copy_text=0x7f05000d;
         public static final int decrypt=0x7f050007;
         public static final int encrypt=0x7f050006;
+        public static final int enterSender=0x7f050014;
         public static final int generate_random_new_key=0x7f05000f;
-        public static final int hello_world=0x7f050013;
         public static final int manage_keys=0x7f050008;
+        public static final int name=0x7f050013;
+        public static final int ok=0x7f050015;
         public static final int paste=0x7f05000c;
         public static final int title_activity_decrypt=0x7f050004;
         public static final int title_activity_decrypted=0x7f05000a;

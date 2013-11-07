@@ -31,7 +31,7 @@
         android:layout_alignRight="@+id/editTextEncrypted"
         android:layout_marginBottom="49dp"
         android:layout_marginRight="37dp"
-        android:onClick="encrypt"
+        android:onClick="decrypt"
         android:text="@string/decrypt" />
 
     <Button

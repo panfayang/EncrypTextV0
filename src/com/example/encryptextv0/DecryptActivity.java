@@ -1,12 +1,13 @@
 package com.example.encryptextv0;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.View;
 
-public class DecryptActivity extends Activity {
+public class DecryptActivity extends FragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -24,8 +25,11 @@ public class DecryptActivity extends Activity {
 	public void decrypt(View view) {
 		//do decryption
 		
-		Intent intent = new Intent(this, DecryptedActivity.class);
-		startActivity(intent);
+		DialogFragment dialog = new SenderNameFragment();
+		dialog.show(getSupportFragmentManager(), "senderDialog");
+		
+		//Intent intent = new Intent(this, DecryptedActivity.class);
+		//startActivity(intent);
 	}
 	
 }
