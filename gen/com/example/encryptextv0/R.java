@@ -26,7 +26,7 @@ public final class R {
     public static final class id {
         public static final int PasteEncrypted=0x7f080002;
         public static final int PasteNormal=0x7f080007;
-        public static final int action_settings=0x7f08000f;
+        public static final int action_settings=0x7f080011;
         public static final int buttonDecrypt=0x7f08000c;
         public static final int buttonDoDecrypt=0x7f080001;
         public static final int buttonDoEncrypt=0x7f080006;
@@ -38,8 +38,10 @@ public final class R {
         public static final int editTextEncrypted=0x7f080000;
         public static final int editTextNormal=0x7f080005;
         public static final int generateRandomKey=0x7f08000e;
+        public static final int storeKey=0x7f080010;
         public static final int textViewDecrypted=0x7f080003;
         public static final int textViewEncrypted=0x7f080008;
+        public static final int viewKeyTV=0x7f08000f;
     }
     public static final class layout {
         public static final int activity_decrypt=0x7f030000;
@@ -67,6 +69,7 @@ public final class R {
         public static final int generate_random_new_key=0x7f05000f;
         public static final int manage_keys=0x7f050008;
         public static final int paste=0x7f05000c;
+        public static final int store_key_button=0x7f050010;
         public static final int title_activity_decrypt=0x7f050004;
         public static final int title_activity_decrypted=0x7f05000a;
         public static final int title_activity_encrpyt=0x7f050002;

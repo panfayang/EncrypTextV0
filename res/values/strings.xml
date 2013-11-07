@@ -17,5 +17,6 @@
     <string name="copy_text">Copy Text</string>
     <string name="copy_key">Copy Key</string>
     <string name="generate_random_new_key">New Key</string>
+    <string name="store_key_button">Store This Key!</string>
 
 </resources>

@@ -8,14 +8,32 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ManageKeysActivity" >
 
+    <TextView
+        android:id="@+id/viewKeyTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/generateRandomKey"
+        android:layout_centerVertical="true"/>
+
+    <Button
+        android:id="@+id/storeKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/generateRandomKey"
+        android:layout_alignBottom="@+id/generateRandomKey"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/generateRandomKey"
+        android:text="@string/store_key_button" />
+
     <Button
         android:id="@+id/generateRandomKey"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="72dp"
-        android:text="@string/generate_random_new_key"
-        android:onClick="newKey" />
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="79dp"
+        android:onClick="onClick"
+        android:text="@string/generate_random_new_key" />
 
 </RelativeLayout>
