@@ -28,7 +28,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/textViewEncrypted"
         android:layout_marginBottom="52dp"
-        android:text="@string/copy_text" />
+        android:text="@string/copy_text"
+        android:onClick="copyText" />
 
     <Button
         android:id="@+id/copyKey"
@@ -38,6 +39,7 @@
         android:layout_alignBottom="@+id/copyEncryptedText"
         android:layout_marginRight="23dp"
         android:layout_toLeftOf="@+id/copyEncryptedText"
-        android:text="@string/copy_key" />
+        android:text="@string/copy_key"
+        android:onClick="copyKey" />
 
 </RelativeLayout>

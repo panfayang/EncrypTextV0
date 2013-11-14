@@ -22,8 +22,13 @@
     <string name="title_activity_delete__keys">Delete_Keys</string>
     <string name="title_activity_view__keys">View_Keys</string>
     <string name="name">Name</string>
-    <string name="enterSender">Enter name of sender</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="enter_a_key_name">Enter a key name</string>
+    <string name="enter_a_name">Enter a name</string>
+    <string name="delete">Delete</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter">Enter</string>
+    <string name="paste_key_here">Paste key here</string>
+    <string name="paste_key">Paste key</string>
 </resources>

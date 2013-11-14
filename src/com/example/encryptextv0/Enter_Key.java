@@ -1,6 +1,7 @@
 package com.example.encryptextv0;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,7 +9,6 @@ import android.view.View;
 import android.widget.EditText;
 
 public class Enter_Key extends Activity {
-
 
 	EditText name;
 	EditText key;
@@ -29,8 +29,8 @@ public class Enter_Key extends Activity {
 	public void addAKey(View v)
 	{
 			addKeyToDb();	
-//			Intent intent = new Intent(this, View_Keys.class);
-//	    	startActivity(intent);	
+			Intent intent = new Intent(this, View_List.class);
+	    	startActivity(intent);	
 	}
 	
 	public void addKeyToDb()
@@ -44,5 +44,8 @@ public class Enter_Key extends Activity {
 		keyManager.close();
 		db.close();
 	}
-
+	
+	
+	
+	
 }

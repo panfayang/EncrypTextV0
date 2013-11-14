@@ -6,12 +6,15 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.encryptextv0.Key_Contract.KeyEntry;
 
 public class View_Keys extends Activity {
 
+	EditText name;
+	EditText key;
 	Key_Manager keyManager;
 	private SQLiteDatabase db;
 	TextView showAll;
@@ -33,6 +36,8 @@ public class View_Keys extends Activity {
 	
 	public String showKeys()
 	{
+		name =((EditText)findViewById(R.id.enterName));
+		key = ((EditText)findViewById(R.id.PasteKeyEdit));
 		keyManager = new Key_Manager(this);
 		db = keyManager.getReadableDatabase();
 		
@@ -79,5 +84,4 @@ public class View_Keys extends Activity {
 
 
 	
-
 }

@@ -18,7 +18,7 @@
             android:id="@+id/deletePrompt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enter a key name" />
+            android:text="@string/enter_a_key_name" />
         
     </TableRow>
 
@@ -31,7 +31,7 @@
             android:id = "@+id/enterDelete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter a name"                        
+            android:hint="@string/enter_a_name"                        
             />        
     </TableRow>
 
@@ -44,7 +44,7 @@
             android:id="@+id/delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delete "
+            android:text="@string/delete"
             android:onClick="deleteButton"
              />
 

@@ -18,7 +18,7 @@
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enter Name" />
+            android:text="@string/enter_name" />
 
     </TableRow>
 
@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Enter a name" />
+            android:hint="@string/enter_a_name" />
 
     </TableRow>
 
@@ -45,7 +45,7 @@
             android:id="@+id/Enter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter"
+            android:text="@string/enter"
             android:onClick="addAKey"
              />
 
@@ -60,7 +60,7 @@
             android:id="@+id/PasteKey"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Paste key here"
+            android:text="@string/paste_key_here"
             />
     </TableRow>
 
@@ -73,7 +73,7 @@
             android:id = "@+id/PasteKeyEdit"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            android:hint="Paste key"            
+            android:hint="@string/paste_key"            
             />
     </TableRow>
 

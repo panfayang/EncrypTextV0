@@ -87,6 +87,13 @@ public class Key_Manager extends SQLiteOpenHelper
 		onUpgrade(db, oldVersion, newVersion);
 	} 
 	
+	public void deleteKey(String name)
+	{
+		SQLiteDatabase db = this.getWritableDatabase();
+		db.delete(KeyEntry.TABLE_NAME, KeyEntry.COLUMN_NAME_NAME + "=" + name,null);
+		db.execSQL("DROP TABLE IF EXISTS" + KeyEntry.TABLE_NAME);
+	}
+	
 	
 	
 }

@@ -42,6 +42,7 @@
         android:layout_alignBottom="@+id/buttonDoEncrypt"
         android:layout_alignLeft="@+id/editTextNormal"
         android:layout_marginLeft="35dp"
-        android:text="@string/paste" />
+        android:text="@string/paste"
+        android:onClick="paste" />
 
 </RelativeLayout>
