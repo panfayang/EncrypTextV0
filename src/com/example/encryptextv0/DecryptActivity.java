@@ -48,6 +48,13 @@ public class DecryptActivity extends Activity {
 			.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int id) {
 						name = enterName.getText().toString();
+						Intent intent = new Intent(getApplicationContext(), DecryptedActivity.class);
+						intent.putExtra("key", name);
+						String text = ((EditText) findViewById(R.id.editTextEncrypted)).getText().toString();
+						intent.putExtra("text", text);
+						startActivity(intent);
+
+						
 						// Do decryption
 					}
 			   })

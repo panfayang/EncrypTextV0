@@ -33,7 +33,7 @@ public class EncryptActivity extends Activity {
 	}
 	
 	// need to have this string in the outer class to use it outside of the alert
-	private String name = "";
+//	private String name = "";
 	
 	public void encrypt(View view) {
 		final EditText enterName = new EditText(this);
@@ -45,9 +45,13 @@ public class EncryptActivity extends Activity {
 			.setView(enterName)
 			.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int id) {
-						name = enterName.getText().toString();
-						// Do encryption here maybe?
-					}
+						String name = enterName.getText().toString();
+						Intent intent = new Intent(getApplicationContext(), EncryptedActivity.class);
+						intent.putExtra("key", name);
+						String text = ((EditText) findViewById(R.id.editTextNormal)).getText().toString();
+						intent.putExtra("text", text);
+						startActivity(intent);
+						}
 			   })
 			.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
 				   public void onClick(DialogInterface dialog, int id) {

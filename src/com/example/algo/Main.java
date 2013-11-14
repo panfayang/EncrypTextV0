@@ -17,7 +17,9 @@ public class Main {
 		testStrings.add(sbTest.toString());
 //		testStrings.add('e');
 //		testStrings.add(" !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~");
-		
+//		String tempKey = "0,31|28,10|90,15|62,55|99,65|63,34|49,88|4,62|18,16|41,34";
+//		KeyParser keyparser = new KeyParser();
+//		System.out.println(keyparser.parseToKey(tempKey).get(9).toString()+"what???");
 		ArrayList<Key> testKey = new ArrayList<Key>();
 		for (int start = 0; start<10; start++){
 			for (int twist = 0; twist<95; twist++){

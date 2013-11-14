@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 
+import com.example.algo.KeyParser;
+
 public class Enter_Key extends Activity {
 
 	EditText name;
@@ -35,7 +37,6 @@ public class Enter_Key extends Activity {
 	
 	public void addKeyToDb()
 	{	
-		
 		name =((EditText)findViewById(R.id.enterName));
 		key = ((EditText)findViewById(R.id.PasteKeyEdit));
 		keyManager = new Key_Manager(this);
@@ -43,6 +44,16 @@ public class Enter_Key extends Activity {
 		keyManager.addKey(name.getText().toString(), key.getText().toString()); 
 		keyManager.close();
 		db.close();
+		
+	}
+	
+	public String newKey(){
+		KeyParser kp = new KeyParser();
+		return kp.parseToString(kp.randomKeyGenerator());
+	}
+	
+	public void randomKey (View view){
+		((EditText) findViewById(R.id.PasteKeyEdit)).setText(newKey());
 	}
 	
 	

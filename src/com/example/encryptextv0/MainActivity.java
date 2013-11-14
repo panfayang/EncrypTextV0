@@ -33,25 +33,8 @@ public class MainActivity extends Activity {
     }
     
     public void startManageKeysActivity(View view) {
-    	Intent intent = new Intent(this, ManageKeysActivity.class);
+    	Intent intent = new Intent(this, KeyApp.class);
     	startActivity(intent);
     }
 
-	public void addKey(View v)
-	{
-		Intent intent = new Intent(this, Enter_Key.class);
-    	startActivity(intent);	
-	}
-	
-	public void deleteKey(View v)
-	{
-		Intent intent = new Intent(this, Delete_Keys.class);
-    	startActivity(intent);	
-   	}
-	
-	public void viewKey(View v)
-	{
-		Intent intent = new Intent(this, View_Keys.class);
-    	startActivity(intent);	
-	}
 }

@@ -9,8 +9,8 @@ public class KeyParser {
 
 	public ArrayList<Key> parseToKey (String keyString){
 		ArrayList<Key> keyKey = new ArrayList<Key>();
-		for (String keyPair:keyString.split("|")){
-			if (keyPair.length()>4){
+		for (String keyPair:keyString.split("[|]")){
+			if (keyPair.length()>3){
 				int start = Integer.parseInt(keyPair.split(",")[0]);
 				int twist = Integer.parseInt(keyPair.split(",")[1]);
 				Key tempKeyPair = new Key(start, twist);
@@ -26,6 +26,7 @@ public class KeyParser {
 			sb.append(key.toString());
 			sb.append("|");
 		}
+//		sb.delete(sb.length()-1, sb.length());
 		return sb.toString();
 	}
 

@@ -7,32 +7,36 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Delete_Keys" >
+    tools:context=".KeyApp" >
 
     <TableRow
         android:id="@+id/tableRow1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
-        <TextView
-            android:id="@+id/deletePrompt"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/addKey"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter a key name" />
-        
+            android:text="Add Key" 
+            android:onClick="addKey"
+            />
+
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
-        
-        <EditText 
-            android:id = "@+id/enterDelete"
-            android:layout_width="match_parent"
+
+        <Button
+            android:id="@+id/ViewKeys"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enter a name"                        
-            />        
+            android:text="View Keys"
+            android:onClick="viewKey"
+             />
+
     </TableRow>
 
     <TableRow
@@ -41,12 +45,13 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/delete"
+            android:id="@+id/DeleteKey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delete "
-            android:onClick="deleteButton"
-             />
+            android:text="Delete Key" 
+            android:onClick = "deleteKey"
+            
+            />
 
     </TableRow>
 

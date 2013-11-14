@@ -22,6 +22,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity
+            android:name="com.example.encryptextv0.Enter_Key"
+            android:label="@string/title_activity_enter__key" >
+        </activity>
+        <activity
+            android:name="com.example.encryptextv0.Delete_Keys"
+            android:label="@string/title_activity_delete__keys" >
+        </activity>
+        <activity
+            android:name="com.example.encryptextv0.View_Keys"
+            android:label="@string/title_activity_view__keys" >
+        </activity>
+        <activity
+            android:name="com.example.encryptextv0.View_List"
+            android:label="@string/title_activity_view__list" >
+        </activity>
+        <activity
+            android:name="com.example.encryptextv0.KeyApp"
+            android:label="@string/title_activity_key_app">
+            
+        </activity>
         <activity
             android:name="com.example.encryptextv0.EncrpytActivity"
             android:label="@string/title_activity_encrpyt" >
@@ -50,18 +72,7 @@
             android:name="com.example.encryptextv0.EncryptedActivity"
             android:label="@string/title_activity_encrypted" >
         </activity>
-        <activity
-            android:name="com.example.encryptextv0.Delete_Keys"
-            android:label="@string/title_activity_delete__keys" >
-        </activity>
-        <activity
-            android:name="com.example.encryptextv0.View_Keys"
-            android:label="@string/title_activity_view__keys" >
-        </activity>
-        <activity
-            android:name="com.example.encryptextv0.Enter_Key"
-            android:label="@string/title_activity_enter__key" >
-        </activity>
+
     </application>
 
 </manifest>

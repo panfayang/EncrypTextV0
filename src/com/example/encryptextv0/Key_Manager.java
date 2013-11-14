@@ -64,7 +64,7 @@ public class Key_Manager extends SQLiteOpenHelper
 				{
 				KeyEntry.KEY_ID, KeyEntry.COLUMN_NAME_NAME, 
 				KeyEntry.COLUMN_NAME_KEY }; 
-		Cursor cursor = db.query(KeyEntry.TABLE_KEY, keys, KeyEntry.KEY_ID + "=?", null, null, null, null);
+		Cursor cursor = db.query(KeyEntry.TABLE_NAME, keys, KeyEntry.KEY_ID + "=?", null, null, null, null);
 		if(cursor !=null)
 		{
 			cursor.moveToFirst();
@@ -87,11 +87,11 @@ public class Key_Manager extends SQLiteOpenHelper
 		onUpgrade(db, oldVersion, newVersion);
 	} 
 	
-	public void deleteKey(String name)
+	public void deleteKey(long id)
 	{
-		SQLiteDatabase db = this.getWritableDatabase();
-		db.delete(KeyEntry.TABLE_NAME, KeyEntry.COLUMN_NAME_NAME + "=" + name,null);
-		db.execSQL("DROP TABLE IF EXISTS" + KeyEntry.TABLE_NAME);
+	    SQLiteDatabase db = this.getWritableDatabase();
+	    String name = String.valueOf(id);
+	    db.delete(KeyEntry.TABLE_NAME, KeyEntry.KEY_ID + "=" + name, null);
 	}
 	
 	
