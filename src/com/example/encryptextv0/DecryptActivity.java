@@ -1,3 +1,9 @@
+/**
+ * @author Kevin Davison, Sam Evans-Golden, Fayang Pan
+ * 
+ * 
+ */
+
 package com.example.encryptextv0;
 
 import android.app.Activity;
@@ -5,11 +11,8 @@ import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.ClipDescription;
 import android.content.ClipboardManager;
-import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.Menu;
@@ -31,9 +34,6 @@ public class DecryptActivity extends Activity {
 		getMenuInflater().inflate(R.menu.decrypt, menu);
 		return true;
 	}
-
-	// need to have this string in the outer class to use it outside of the alert
-	private String name = "";
 	
 	public void decrypt(View view) {
 		//do decryption
@@ -47,15 +47,12 @@ public class DecryptActivity extends Activity {
 			.setView(enterName)
 			.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int id) {
-						name = enterName.getText().toString();
+						String name = enterName.getText().toString();
 						Intent intent = new Intent(getApplicationContext(), DecryptedActivity.class);
 						intent.putExtra("key", name);
-						String text = ((EditText) findViewById(R.id.editTextEncrypted)).getText().toString();
+						String text = ((EditText) findViewById(R.id.editTextDecrypted)).getText().toString();
 						intent.putExtra("text", text);
 						startActivity(intent);
-
-						
-						// Do decryption
 					}
 			   })
 			.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
@@ -63,11 +60,6 @@ public class DecryptActivity extends Activity {
 				   }
 			   })
 			.show();
-		
-		// Do decryption
-		
-//		Intent intent = new Intent(this, DecryptedActivity.class);
-//		startActivity(intent);
 	}
 	
 	/*
@@ -77,6 +69,7 @@ public class DecryptActivity extends Activity {
 	public void paste(View view) {
 		String pasteData = "";
 		ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+		
 		if(!clipboard.hasPrimaryClip()) {
 			Toast toast = Toast.makeText(this, "Nothing copied", Toast.LENGTH_SHORT);
 			toast.show();
@@ -89,29 +82,13 @@ public class DecryptActivity extends Activity {
 			ClipData.Item item = clipboard.getPrimaryClip().getItemAt(0);
 			pasteData = (String) item.getText();
 			
-			if(pasteData == null) {
-				Uri pasteUri = item.getUri();
-				if(pasteUri != null) {
-					ContentResolver cr = getContentResolver();
-					Cursor pasteCursor = cr.query(pasteUri, null, null, null, null);
-					if(pasteCursor != null) {
-						if(pasteCursor.moveToFirst())
-						{
-							pasteData = pasteCursor.getString(0);
-						}
-					}
-					pasteCursor.close();
-				}
-				else {
-					//the copied item is not text, and not a Uri. That's bad.
-					Toast toast = Toast.makeText(this, "Copied item format is unknown", Toast.LENGTH_SHORT);
-					toast.show();
-				}
-			}
-			
 			if(pasteData != null) {
-				EditText edit = (EditText) findViewById(R.id.editTextEncrypted);
+				EditText edit = (EditText) findViewById(R.id.editTextDecrypted);
 				edit.setText(pasteData);
+			}
+			else{
+				Toast toast = Toast.makeText(this, "Copied item format is unknown", Toast.LENGTH_SHORT);
+				toast.show();
 			}
 		}
 	}

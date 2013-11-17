@@ -1,14 +1,12 @@
-package com.example.algo;
-import java.util.ArrayList;
-
-/**
- * 
- */
-
 /**
  * @author Fayang Pan
  *
  */
+
+package com.example.algo;
+import java.util.ArrayList;
+
+
 public class Encrypt {
 	
 	public Encrypt(){}

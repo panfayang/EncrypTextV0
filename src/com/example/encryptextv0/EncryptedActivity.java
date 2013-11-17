@@ -23,6 +23,7 @@ import com.example.encryptextv0.Key_Contract.KeyEntry;
 public class EncryptedActivity extends Activity {
 	
 	private SQLiteDatabase db;
+	private String key;
 
 
 	@Override
@@ -48,7 +49,7 @@ public class EncryptedActivity extends Activity {
 		
 		if(!message.equals("")) {
 			ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-			ClipData clip = ClipData.newPlainText("Decrypted message", message);
+			ClipData clip = ClipData.newPlainText("Encrypted message", message);
 			clipboard.setPrimaryClip(clip);
 		}
 	}
@@ -57,12 +58,11 @@ public class EncryptedActivity extends Activity {
 	 * Copy the key to the clipboard
 	 */
 	public void copyKey(View view) {
-		String message = "";
-		//Need to get the key here somehow
+		String message = this.key;
 		
 		if(!message.equals("")) {
 			ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-			ClipData clip = ClipData.newPlainText("Decrypted message", message);
+			ClipData clip = ClipData.newPlainText("Encrypted message", message);
 			clipboard.setPrimaryClip(clip);
 		}
 	}
@@ -86,6 +86,7 @@ public class EncryptedActivity extends Activity {
 				String keyKey = cursor.getString(cursor.getColumnIndex(KeyEntry.COLUMN_NAME_KEY));
 				if(keyName.equals(getIntent().getStringExtra("key"))){
 					Toast.makeText(getApplicationContext(), keyName+" was found!" , Toast.LENGTH_SHORT).show();
+					this.key = keyKey;
 					return keyKey;
 				}
 			}while(cursor.moveToNext());

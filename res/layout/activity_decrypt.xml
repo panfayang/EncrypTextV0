@@ -9,7 +9,7 @@
     tools:context=".DecryptActivity" >
 
         <EditText
-        android:id="@+id/editTextEncrypted"
+        android:id="@+id/editTextDecrypted"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -28,19 +28,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/editTextEncrypted"
+        android:layout_alignRight="@+id/editTextDecrypted"
         android:layout_marginBottom="49dp"
         android:layout_marginRight="37dp"
         android:onClick="decrypt"
         android:text="@string/decrypt" />
 
     <Button
-        android:id="@+id/PasteEncrypted"
+        android:id="@+id/PasteDecrypted"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/buttonDoDecrypt"
         android:layout_alignBottom="@+id/buttonDoDecrypt"
-        android:layout_alignLeft="@+id/editTextEncrypted"
+        android:layout_alignLeft="@+id/editTextDecrypted"
         android:layout_marginLeft="37dp"
         android:text="@string/paste"
         android:onClick="paste" />

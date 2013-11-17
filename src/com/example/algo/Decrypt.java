@@ -1,14 +1,10 @@
+
 package com.example.algo;
 import java.util.ArrayList;
 
 /**
- * 
- */
-
-/**
  * @author Fayang Pan
  * Oct 22, 2013
- * CCTry
  */
 public class Decrypt {
 	public Decrypt(){}

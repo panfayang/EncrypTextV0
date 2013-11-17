@@ -28,6 +28,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="51dp"
-        android:text="@string/copy_text" />
+        android:text="@string/copy_text"
+        android:onClick="copyText" />
 
 </RelativeLayout>

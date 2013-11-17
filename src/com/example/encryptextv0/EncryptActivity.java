@@ -4,11 +4,8 @@ import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.ClipDescription;
 import android.content.ClipboardManager;
-import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.Menu;
@@ -48,7 +45,7 @@ public class EncryptActivity extends Activity {
 						String name = enterName.getText().toString();
 						Intent intent = new Intent(getApplicationContext(), EncryptedActivity.class);
 						intent.putExtra("key", name);
-						String text = ((EditText) findViewById(R.id.editTextNormal)).getText().toString();
+						String text = ((EditText) findViewById(R.id.editTextEncrypted)).getText().toString();
 						intent.putExtra("text", text);
 						startActivity(intent);
 						}
@@ -58,9 +55,6 @@ public class EncryptActivity extends Activity {
 				   }
 			   })
 			.show();
-		
-//		Intent intent = new Intent(this, EncryptedActivity.class);
-//		startActivity(intent);
 	}
 	
 	/*
@@ -82,29 +76,13 @@ public class EncryptActivity extends Activity {
 			ClipData.Item item = clipboard.getPrimaryClip().getItemAt(0);
 			pasteData = (String) item.getText();
 			
-			if(pasteData == null) {
-				Uri pasteUri = item.getUri();
-				if(pasteUri != null) {
-					ContentResolver cr = getContentResolver();
-					Cursor pasteCursor = cr.query(pasteUri, null, null, null, null);
-					if(pasteCursor != null) {
-						if(pasteCursor.moveToFirst())
-						{
-							pasteData = pasteCursor.getString(0);
-						}
-					}
-					pasteCursor.close();
-				}
-				else {
-					//the copied item is not text, and not a Uri. That's bad.
-					Toast toast = Toast.makeText(this, "Copied item format is unknown", Toast.LENGTH_SHORT);
-					toast.show();
-				}
-			}
-			
 			if(pasteData != null) {
 				EditText edit = (EditText) findViewById(R.id.editTextEncrypted);
 				edit.setText(pasteData);
+			}
+			else{
+				Toast toast = Toast.makeText(this, "Copied item format is unknown", Toast.LENGTH_SHORT);
+				toast.show();
 			}
 		}
 	}
