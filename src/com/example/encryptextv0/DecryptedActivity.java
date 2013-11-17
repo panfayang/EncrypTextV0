@@ -1,3 +1,14 @@
+/**
+ * @author Kevin Davison, Sam Evans-Golden, Fayang Pan
+ * 
+ * This class handles decryption activity. It searches for 
+ * the key with the input key name and tries to decrypt the 
+ * input text with the key.
+ * 
+ * After decryption, the user can choose to copy the decrypted 
+ * text.
+ * 
+ */
 package com.example.encryptextv0;
 
 import java.util.ArrayList;

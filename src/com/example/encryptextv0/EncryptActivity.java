@@ -1,3 +1,13 @@
+/**
+ * @author Kevin Davison, Sam Evans-Golden, Fayang Pan
+ * 
+ * This class handles incoming text. User can input or paste 
+ * text into the EditText, and by pressing Encrypt button, 
+ * an AlertDialog pops up for name of the key the user would 
+ * like to use to encrypt the text.
+ * 
+ */
+
 package com.example.encryptextv0;
 import android.app.Activity;
 import android.app.AlertDialog;

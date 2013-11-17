@@ -1,11 +1,15 @@
+/**
+ * @author Fayang Pan
+ * Oct 22, 2013
+ * 
+ * This class handles decryption request, takes in a String and an ArrayList of keys, 
+ * and output is the decrypted String. 
+ */
 
 package com.example.algo;
 import java.util.ArrayList;
 
-/**
- * @author Fayang Pan
- * Oct 22, 2013
- */
+
 public class Decrypt {
 	public Decrypt(){}
 	

@@ -1,3 +1,10 @@
+/**
+ * @author Kevin Davison, Sam Evans-Golden, Fayang Pan
+ * 
+ * This is the database manager. This class handles adding, 
+ * viewing and deleting keys.
+ */
+
 package com.example.encryptextv0;
 
 import java.util.ArrayList;

@@ -1,9 +1,19 @@
-package com.example.encryptextv0;
-
-import android.app.Activity;
-
-public class Delete_Keys extends Activity {
-
+///**
+// * @author Kevin Davison, Sam Evans-Golden, Fayang Pan
+// * 
+// * This class handles deletion of a key.
+// * 
+// */
+//package com.example.encryptextv0;
+//
+//import android.app.Activity;
+//import android.os.Bundle;
+//import android.view.Menu;
+//import android.view.View;
+//import android.widget.EditText;
+//
+//public class Delete_Keys extends Activity {
+//
 //	private Key_Manager keyManager; 
 //	private String name;
 //	EditText delete; 
@@ -30,5 +40,5 @@ public class Delete_Keys extends Activity {
 //		keyManager = new Key_Manager(this);
 //		keyManager.deleteKey(name);;
 //	}
-
-}
+//
+//}

@@ -1,3 +1,10 @@
+/**
+ * @author Fayang Pan
+ * Oct 22, 2013
+ * 
+ * Test class for algo
+ */
+
 package com.example.algo;
 import java.util.ArrayList;
 

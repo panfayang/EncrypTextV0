@@ -1,3 +1,9 @@
+/**
+ * @author Kevin Davison, Sam Evans-Golden, Fayang Pan
+ * 
+ * This is the contract for the database.
+ */
+
 package com.example.encryptextv0;
 
 import android.provider.BaseColumns;

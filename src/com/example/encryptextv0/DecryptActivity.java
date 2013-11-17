@@ -1,6 +1,10 @@
 /**
  * @author Kevin Davison, Sam Evans-Golden, Fayang Pan
  * 
+ * This class handles incoming text. User can input or paste 
+ * text into the EditText, and by pressing Decrypt button, 
+ * an AlertDialog pops up for name of the key the user would 
+ * like to use to decrypt the text.
  * 
  */
 

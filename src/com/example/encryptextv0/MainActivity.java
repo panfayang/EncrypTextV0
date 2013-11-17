@@ -1,3 +1,8 @@
+/**
+ * @author Kevin Davison, Sam Evans-Golden, Fayang Pan
+ * 
+ * This is the Main Activity class. 
+ */
 package com.example.encryptextv0;
 
 import android.app.Activity;

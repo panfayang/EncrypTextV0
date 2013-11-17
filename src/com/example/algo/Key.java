@@ -1,3 +1,11 @@
+/**
+ * @author Fayang Pan
+ * Oct 22, 2013
+ * 
+ * This class treats a pair of integer values, (start, twist), as an 
+ * object. start represents the starting index, and twist represents
+ * the number of shifts in the ASCII table.
+ */
 package com.example.algo;
 
 public class Key {

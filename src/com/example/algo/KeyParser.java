@@ -1,3 +1,11 @@
+/**
+ * @author Fayang Pan
+ * Oct 22, 2013
+ * 
+ * This class parses the ArrayList of Keys to String and 
+ * the other way round. The purpose is for easy storage.
+ */
+
 package com.example.algo;
 import java.util.ArrayList;
 import java.util.Random;

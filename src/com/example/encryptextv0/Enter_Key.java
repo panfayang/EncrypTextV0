@@ -1,3 +1,8 @@
+/**
+ * @author Kevin Davison, Sam Evans-Golden, Fayang Pan
+ * 
+ * This class handles addition of a new key.
+ */
 package com.example.encryptextv0;
 
 import android.app.Activity;

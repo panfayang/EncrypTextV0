@@ -1,6 +1,9 @@
 /**
  * @author Fayang Pan
- *
+ * Oct 22, 2013
+ * 
+ * This class handles encryption request, takes in a String and an ArrayList of keys, 
+ * and output is the encrypted String.
  */
 
 package com.example.algo;
