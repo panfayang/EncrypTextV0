@@ -7,11 +7,8 @@
 
 package com.example.encryptextv0;
 
-import java.util.ArrayList;
-
 import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -61,32 +58,6 @@ public class Key_Manager extends SQLiteOpenHelper
 		}
 		db.close();
 	}
-	
-//	public ArrayList<String> getKeys()
-//	{
-//		ArrayList<String> listRows = new ArrayList<String>();
-//		SQLiteDatabase db = this.getReadableDatabase();
-//		String[] keys = new String[]
-//				{
-//				KeyEntry.KEY_ID, KeyEntry.COLUMN_NAME_NAME, 
-//				KeyEntry.COLUMN_NAME_KEY }; 
-//		Cursor cursor = db.query(KeyEntry.TABLE_NAME, keys, KeyEntry.KEY_ID + "=?", null, null, null, null);
-//		if(cursor !=null)
-//		{
-//			cursor.moveToFirst();
-//		}
-//		while(cursor.isAfterLast()==false)
-//		{
-//			listRows.add(cursor.getString(0));
-//			listRows.add(cursor.getString(1));
-//			cursor.moveToNext();
-//		}
-//		if(cursor != null && !cursor.isClosed())
-//		{
-//			cursor.close();
-//		}
-//		return listRows;			
-//	}
 	
 	public void onDownGrade(SQLiteDatabase db, int oldVersion, int newVersion)
 	{

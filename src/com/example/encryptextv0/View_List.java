@@ -9,11 +9,8 @@ import android.database.sqlite.SQLiteException;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.android.swipedismiss.SwipeDismissListViewTouchListener;
 import com.example.encryptextv0.Key_Contract.KeyEntry;
@@ -60,7 +57,6 @@ public class View_List extends Activity {
                     				db.execSQL("DELETE FROM "+ KeyEntry.TABLE_NAME + 
                     						" WHERE " + KeyEntry.COLUMN_NAME_NAME + "=" + 
                     						"\""+ ((String) list.getItemAtPosition(position)).split("\n")[0] + "\"");
-                    				Toast.makeText(View_List.this, "Key will be deleted", Toast.LENGTH_LONG).show();
                     				mAdapter.remove(mAdapter.getItem(position));
                                 }
                                 mAdapter.notifyDataSetChanged();
