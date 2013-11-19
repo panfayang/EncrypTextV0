@@ -58,49 +58,40 @@ public class Key_Manager extends SQLiteOpenHelper
 		{
 			Log.e("Error in inserting rows", e.toString());
 			e.printStackTrace();
-		
 		}
 		db.close();
 	}
 	
-	public ArrayList<String> getKeys(int id)
-	{
-		ArrayList<String> listRows = new ArrayList<String>();
-		SQLiteDatabase db = this.getReadableDatabase();
-		String[] keys = new String[]
-				{
-				KeyEntry.KEY_ID, KeyEntry.COLUMN_NAME_NAME, 
-				KeyEntry.COLUMN_NAME_KEY }; 
-		Cursor cursor = db.query(KeyEntry.TABLE_NAME, keys, KeyEntry.KEY_ID + "=?", null, null, null, null);
-		if(cursor !=null)
-		{
-			cursor.moveToFirst();
-		}
-		while(cursor.isAfterLast()==false)
-		{
-			listRows.add(cursor.getString(0));
-			listRows.add(cursor.getString(1));
-			cursor.moveToNext();
-		}
-		if(cursor != null && !cursor.isClosed())
-		{
-			cursor.close();
-		}
-		return listRows;			
-	}
+//	public ArrayList<String> getKeys()
+//	{
+//		ArrayList<String> listRows = new ArrayList<String>();
+//		SQLiteDatabase db = this.getReadableDatabase();
+//		String[] keys = new String[]
+//				{
+//				KeyEntry.KEY_ID, KeyEntry.COLUMN_NAME_NAME, 
+//				KeyEntry.COLUMN_NAME_KEY }; 
+//		Cursor cursor = db.query(KeyEntry.TABLE_NAME, keys, KeyEntry.KEY_ID + "=?", null, null, null, null);
+//		if(cursor !=null)
+//		{
+//			cursor.moveToFirst();
+//		}
+//		while(cursor.isAfterLast()==false)
+//		{
+//			listRows.add(cursor.getString(0));
+//			listRows.add(cursor.getString(1));
+//			cursor.moveToNext();
+//		}
+//		if(cursor != null && !cursor.isClosed())
+//		{
+//			cursor.close();
+//		}
+//		return listRows;			
+//	}
 	
 	public void onDownGrade(SQLiteDatabase db, int oldVersion, int newVersion)
 	{
 		onUpgrade(db, oldVersion, newVersion);
 	} 
-	
-	public void deleteKey(long id)
-	{
-	    SQLiteDatabase db = this.getWritableDatabase();
-	    String name = String.valueOf(id);
-	    db.delete(KeyEntry.TABLE_NAME, KeyEntry.KEY_ID + "=" + name, null);
-	}
-	
 	
 	
 }

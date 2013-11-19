@@ -15,10 +15,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.android.swipedismiss.SwipeDismissListViewTouchListener;
 import com.example.encryptextv0.Key_Contract.KeyEntry;
 
 public class View_List extends Activity {
-	private Key_Manager keyManager = new Key_Manager(this);;
 	private SQLiteDatabase db;
 	private ArrayList<String> keyList = new ArrayList<String>();	
 	ListView list;
@@ -28,15 +28,49 @@ public class View_List extends Activity {
 		setContentView(R.layout.activity_view__list);
 		list = (ListView) findViewById(R.id.ListView1);
 		openDatabase();
-		list.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, keyList));
-		list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-			public void onItemClick(AdapterView<?> parentAdapter, View view, int position, long id)
-			{
+		final ArrayAdapter<String> mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, keyList);
+		list.setAdapter(mAdapter);
+//		list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//			public void onItemClick(AdapterView<?> parentAdapter, View view, int position, long id)
+//			{
+//
+//				Key_Manager keyManager = new Key_Manager(getApplicationContext());
+//				db = keyManager.getWritableDatabase();
+//				db.execSQL("DELETE FROM "+ KeyEntry.TABLE_NAME + 
+//						" WHERE " + KeyEntry.COLUMN_NAME_NAME + "=" + 
+//						"\""+ ((String) list.getItemAtPosition(position)).split("\n")[0] + "\"");
+//				Toast.makeText(View_List.this, "Key will be deleted", Toast.LENGTH_LONG).show();
+//			}
+//		});
+		
+		SwipeDismissListViewTouchListener touchListener =
+                new SwipeDismissListViewTouchListener(
+                        list,
+                        new SwipeDismissListViewTouchListener.DismissCallbacks() {
+                            @Override
+                            public boolean canDismiss(int position) {
+                                return true;
+                            }
 
-				keyManager.deleteKey(id);
-				Toast.makeText(View_List.this, "Key will be deleted", Toast.LENGTH_LONG).show();
-			}
-		});
+                            @Override
+                            public void onDismiss(ListView listView, int[] reverseSortedPositions) {
+                                for (int position : reverseSortedPositions) {
+                                	Key_Manager keyManager = new Key_Manager(getApplicationContext());
+                    				db = keyManager.getWritableDatabase();
+                    				db.execSQL("DELETE FROM "+ KeyEntry.TABLE_NAME + 
+                    						" WHERE " + KeyEntry.COLUMN_NAME_NAME + "=" + 
+                    						"\""+ ((String) list.getItemAtPosition(position)).split("\n")[0] + "\"");
+                    				Toast.makeText(View_List.this, "Key will be deleted", Toast.LENGTH_LONG).show();
+                    				mAdapter.remove(mAdapter.getItem(position));
+                                }
+                                mAdapter.notifyDataSetChanged();
+                            }
+                        });
+        list.setOnTouchListener(touchListener);
+        // Setting this scroll listener is required to ensure that during ListView scrolling,
+        // we don't look for swipes.
+        list.setOnScrollListener(touchListener.makeScrollListener());
+
 	}
 
 	private void openDatabase()
@@ -66,10 +100,6 @@ public class View_List extends Activity {
 		}
 	}
 
-
-
-
-	//create a key
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

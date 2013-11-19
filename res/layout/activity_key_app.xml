@@ -18,7 +18,7 @@
             android:id="@+id/addKey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Key" 
+            android:text="@string/add_keys" 
             android:onClick="addKey"
             />
 
@@ -33,25 +33,9 @@
             android:id="@+id/ViewKeys"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="View Keys"
+            android:text="@string/view_keys"
             android:onClick="viewKey"
              />
-
-    </TableRow>
-
-    <TableRow
-        android:id="@+id/tableRow3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
-        <Button
-            android:id="@+id/DeleteKey"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Delete Key" 
-            android:onClick = "deleteKey"
-            
-            />
 
     </TableRow>
 

@@ -91,9 +91,11 @@ public class DecryptedActivity extends Activity {
 			return "";
 		}
 
-		catch (SQLiteException se)
+//		catch (SQLiteException se)
+		catch(Exception e)
 		{
-			Log.e("could not create key", null);	
+//			Log.e("could not create key", null);	
+			Toast.makeText(getApplicationContext(), "Database empty", Toast.LENGTH_SHORT).show();
 			return "";
 		}
 	}

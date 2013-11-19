@@ -18,9 +18,7 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteException;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
@@ -105,9 +103,12 @@ public class EncryptedActivity extends Activity {
 			return "";
 		}
 
-		catch (SQLiteException se)
+//		catch (SQLiteException se)
+		catch(Exception e)
 		{
-			Log.e("could not create key", null);	
+
+			Toast.makeText(getApplicationContext(), "Database empty", Toast.LENGTH_SHORT).show();
+//			Log.e("could not create key", null);	
 			return "";
 		}
 	}

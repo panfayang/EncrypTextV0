@@ -33,4 +33,6 @@
     <string name="paste_key">Paste key</string>
     <string name="title_activity_view__list">View_List</string>
     <string name="title_activity_key_app">KeyApp</string>
+    <string name="add_keys">Add a new key</string>
+    <string name="view_keys">Manage your keys</string>
 </resources>

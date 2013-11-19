@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.algo.KeyParser;
 
@@ -19,7 +20,6 @@ public class Enter_Key extends Activity {
 
 	EditText name;
 	EditText key;
-	private Key_Manager keyManager;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -35,21 +35,16 @@ public class Enter_Key extends Activity {
 	
 	public void addAKey(View v)
 	{
-			addKeyToDb();	
-			Intent intent = new Intent(this, View_List.class);
-	    	startActivity(intent);	
+			addKeyToDb();
+			Toast.makeText(getApplicationContext(), "Key added", Toast.LENGTH_SHORT).show();
 	}
 	
 	public void addKeyToDb()
 	{	
 		name =((EditText)findViewById(R.id.enterName));
 		key = ((EditText)findViewById(R.id.PasteKeyEdit));
-		keyManager = new Key_Manager(this);
-		SQLiteDatabase db = keyManager.getWritableDatabase();
+		Key_Manager keyManager = new Key_Manager(this);
 		keyManager.addKey(name.getText().toString(), key.getText().toString()); 
-		keyManager.close();
-		db.close();
-		
 	}
 	
 	public String newKey(){
