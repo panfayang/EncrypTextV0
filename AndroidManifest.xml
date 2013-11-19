@@ -22,7 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name="com.example.encryptextv0.Enter_Key"
             android:label="@string/title_activity_enter__key" >
@@ -41,8 +40,7 @@
         </activity>
         <activity
             android:name="com.example.encryptextv0.KeyApp"
-            android:label="@string/title_activity_key_app">
-            
+            android:label="@string/title_activity_key_app" >
         </activity>
         <activity
             android:name="com.example.encryptextv0.EncrpytActivity"
@@ -72,7 +70,14 @@
             android:name="com.example.encryptextv0.EncryptedActivity"
             android:label="@string/title_activity_encrypted" >
         </activity>
-
+        <activity
+            android:name="com.example.encryptextv0.PasswordManager"
+            android:label="@string/title_activity_password_manager" >
+        </activity>
+        <activity
+            android:name="com.example.encryptextv0.NewPassword"
+            android:label="@string/title_activity_new_password" >
+        </activity>
     </application>
 
 </manifest>
