@@ -64,12 +64,12 @@ public class MainActivity extends FragmentActivity {
 	public void enterPassword(final View view) {
 		//do decryption		
 		final EditText pw = new EditText(this);
-		pw.setInputType(InputType.TYPE_CLASS_TEXT);
+		pw.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
 		pw.setHint("Please enter your password");
 		
 		
 		new AlertDialog.Builder(this)
-			.setTitle(R.string.newPassword)
+			.setTitle(R.string.enterPassword)
 			.setView(pw)
 			.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int id) {

@@ -98,29 +98,30 @@ public final class R {
         public static final int copy_text=0x7f05000d;
         public static final int decrypt=0x7f050007;
         public static final int delete=0x7f050019;
-        public static final int emailAddress=0x7f050028;
+        public static final int emailAddress=0x7f050029;
         public static final int encrypt=0x7f050006;
         public static final int enter=0x7f05001b;
+        public static final int enterPassword=0x7f050024;
         public static final int enter_a_key_name=0x7f050017;
         public static final int enter_a_name=0x7f050018;
         public static final int enter_name=0x7f05001a;
-        public static final int forget=0x7f05002b;
+        public static final int forget=0x7f05002c;
         public static final int generate_random_new_key=0x7f05000f;
         public static final int hello_world=0x7f050023;
         public static final int manage_keys=0x7f050008;
         public static final int name=0x7f050014;
-        public static final int newPassword=0x7f050024;
-        public static final int newpw=0x7f050026;
-        public static final int newpwAgain=0x7f050027;
+        public static final int newPassword=0x7f050025;
+        public static final int newpw=0x7f050027;
+        public static final int newpwAgain=0x7f050028;
         public static final int ok=0x7f050015;
         public static final int paste=0x7f05000c;
         public static final int paste_key=0x7f05001d;
         public static final int paste_key_here=0x7f05001c;
-        public static final int proceed=0x7f050029;
-        public static final int reset=0x7f05002a;
-        public static final int right=0x7f05002c;
-        public static final int securityAns=0x7f05002f;
-        public static final int securityQn=0x7f05002e;
+        public static final int proceed=0x7f05002a;
+        public static final int reset=0x7f05002b;
+        public static final int right=0x7f05002d;
+        public static final int securityAns=0x7f050030;
+        public static final int securityQn=0x7f05002f;
         public static final int store_key_button=0x7f050010;
         public static final int title_activity_decrypt=0x7f050004;
         public static final int title_activity_decrypted=0x7f05000a;
@@ -132,13 +133,13 @@ public final class R {
         public static final int title_activity_key_app=0x7f05001f;
         public static final int title_activity_manage_key=0x7f050005;
         public static final int title_activity_manage_keys=0x7f050009;
-        public static final int title_activity_new_password=0x7f050025;
+        public static final int title_activity_new_password=0x7f050026;
         public static final int title_activity_password_manager=0x7f050022;
-        public static final int title_activity_security_qn=0x7f050030;
+        public static final int title_activity_security_qn=0x7f050031;
         public static final int title_activity_view__keys=0x7f050013;
         public static final int title_activity_view__list=0x7f05001e;
         public static final int view_keys=0x7f050021;
-        public static final int wrong=0x7f05002d;
+        public static final int wrong=0x7f05002e;
     }
     public static final class style {
         /** 
