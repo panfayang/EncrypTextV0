@@ -47,5 +47,9 @@
     <string name="forget">Forget Password</string>
     <string name="right">Right Password</string>
     <string name="wrong">Wrong Password</string>
+    <string name="securityQn">Security question</string>
+    <string name="securityAns">Answer to the security question</string>
+    <string name="title_activity_security_qn">SecurityQn</string>
+    
 
 </resources>

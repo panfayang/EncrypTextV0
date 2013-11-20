@@ -11,18 +11,24 @@ import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class NewPassword extends DialogFragment {
+public class SecurityQn extends DialogFragment {
 	
 	SharedPreferences ePrefs;
 	
 	@Override
 	public Dialog onCreateDialog(Bundle saveInstanceState){
+		ePrefs = getActivity().getSharedPreferences("com.example.encryptextv0", Context.MODE_PRIVATE);
 		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 		// Get the layout inflater 
 		LayoutInflater inflater = getActivity().getLayoutInflater();
-		final View view = inflater.inflate(R.layout.activity_new_password, null);
+	    final View view = inflater.inflate(R.layout.activity_security_qn, null);
+	    builder.setView(view);
+		TextView tv = (TextView)view.findViewById(R.id.securityQnCheck);
+		tv.setText("Your security qn: \n" + ePrefs.getString("securityQn", "no question specified"));
+//		final View view = inflater.inflate(R.layout.activity_security_qn, null);
 		
 		
 		
@@ -35,25 +41,23 @@ public class NewPassword extends DialogFragment {
 			.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener(){
 				@Override
 				public void onClick(DialogInterface dialog, int id){
-					String pw = ((EditText) view.findViewById(R.id.newpw)).getText().toString();
-					String pwAgain = ((EditText) view.findViewById(R.id.newpwAgain)).getText().toString();
-//					String emailAddress = ((EditText) view.findViewById(R.id.emailAddress)).getText().toString();
-					String qn = ((EditText) view.findViewById(R.id.securityQn)).getText().toString();
-					String ans = ((EditText) view.findViewById(R.id.securityAns)).getText().toString();
+					ePrefs = getActivity().getSharedPreferences("com.example.encryptextv0", Context.MODE_PRIVATE);
+					String ans;
+					try{
+					ans = ((EditText) view.findViewById(R.id.securityAns)).getText().toString();
+					}
+					catch(Exception e){
+					ans = "";	
+					}
+					String rightAns = ePrefs.getString("securityAns", " ");
 
-					if (pw.equals(pwAgain)){
-						ePrefs = getActivity().getSharedPreferences("com.example.encryptextv0", Context.MODE_PRIVATE);
-						ePrefs.edit().putString("password", pw).commit();
-//						ePrefs.edit().putString("email", emailAddress).commit();
-						ePrefs.edit().putString("securityQn", qn).commit();
-						ePrefs.edit().putString("securityAns", ans).commit();
-
-						Toast.makeText( getActivity(), "password successfully set", Toast.LENGTH_SHORT).show();
+					if (ans.equals(rightAns)){
+						Toast.makeText( getActivity(), "answer is right, your password was: " + ePrefs.getString("password", ""), Toast.LENGTH_SHORT).show();
 						Intent intent = new Intent(getActivity(), KeyApp.class);
 				    	startActivity(intent);
 					}
 					else{
-						Toast.makeText( getActivity(), "Passwords did not match, please try again", Toast.LENGTH_SHORT).show();
+						Toast.makeText( getActivity(), "Wrong answer, please try again", Toast.LENGTH_SHORT).show();
 					}
 					
 					
@@ -61,7 +65,7 @@ public class NewPassword extends DialogFragment {
 			})
 			.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int id){
-					NewPassword.this.getDialog().cancel();
+					SecurityQn.this.getDialog().cancel();
 				}
 					
 			});

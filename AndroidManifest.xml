@@ -78,6 +78,10 @@
             android:name="com.example.encryptextv0.NewPassword"
             android:label="@string/title_activity_new_password" >
         </activity>
+        <activity
+            android:name="com.example.encryptextv0.SecurityQn"
+            android:label="@string/title_activity_security_qn" >
+        </activity>
     </application>
 
 </manifest>

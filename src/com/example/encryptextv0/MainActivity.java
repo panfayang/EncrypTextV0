@@ -132,7 +132,10 @@ public class MainActivity extends FragmentActivity {
 			.setView(pw)
 			.setPositiveButton(R.string.forget, new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int id) {
-						Toast.makeText(getApplicationContext(), "An email with password will be sent", Toast.LENGTH_SHORT).show();
+						FragmentManager fm = getSupportFragmentManager();
+						SecurityQn np = new SecurityQn();
+						np.show(fm, "Security Qn");
+//						Toast.makeText(getApplicationContext(), "An email with password will be sent", Toast.LENGTH_SHORT).show();
 					}
 			   })
 			.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
