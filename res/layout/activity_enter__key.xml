@@ -7,19 +7,6 @@
     tools:context=".Enter_Key" >
 
     <EditText
-        android:id="@+id/PasteKeyEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="21dp"
-        android:layout_below="@+id/PasteKey"
-        android:ems="10"
-        android:hint="@string/paste_key" >
-
-        <requestFocus />
-    </EditText>
-
-    <EditText
         android:id="@+id/enterName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,15 +26,6 @@
         android:text="@string/enter_name" />
 
     <Button
-        android:id="@+id/Enter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/enterName"
-        android:layout_below="@+id/enterName"
-        android:onClick="addAKey"
-        android:text="@string/enter" />
-
-    <Button
         android:id="@+id/generateRandomKey"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,13 +34,44 @@
         android:onClick="randomKey"
         android:text="@string/generate_random_new_key" />
 
+    <EditText
+        android:id="@+id/PasteKeyEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/enterName"
+        android:layout_below="@+id/enterName"
+        android:layout_marginTop="34dp"
+        android:ems="10"
+        android:hint="@string/enter_a_key" />
+
     <TextView
         android:id="@+id/PasteKey"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/PasteKeyEdit"
-        android:layout_below="@+id/Enter"
-        android:layout_marginTop="30dp"
-        android:text="@string/paste_key_here" />
+        android:layout_below="@+id/enterName"
+        android:layout_marginTop="20dp"
+        android:text="@string/enter_key" />
+
+    <Button
+        android:id="@+id/PasteKeyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/generateRandomKey"
+        android:layout_alignBottom="@+id/generateRandomKey"
+        android:layout_marginLeft="21dp"
+        android:layout_toRightOf="@+id/generateRandomKey"
+        android:text="@string/paste_key"
+        android:onClick="paste" />
+
+    <Button
+        android:id="@+id/Enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/generateRandomKey"
+        android:layout_below="@+id/generateRandomKey"
+        android:layout_marginTop="20dp"
+        android:onClick="addAKey"
+        android:text="@string/enter" />
 
 </RelativeLayout>
