@@ -54,17 +54,6 @@
         android:text="@string/enter_key" />
 
     <Button
-        android:id="@+id/PasteKeyButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/generateRandomKey"
-        android:layout_alignBottom="@+id/generateRandomKey"
-        android:layout_marginLeft="21dp"
-        android:layout_toRightOf="@+id/generateRandomKey"
-        android:text="@string/paste_key"
-        android:onClick="paste" />
-
-    <Button
         android:id="@+id/Enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
