@@ -53,6 +53,21 @@ public class KeyParser {
 		
 		return randomKey;
 	}
+	
+	public boolean checkValidKey(String string){
+		try{
+			ArrayList<Key> check = parseToKey(string);
+			for (Key key: check){
+				if (key.getStart()<0){
+					return false;
+				}
+			}
+			return true;
+		}
+		catch(Exception e){
+			return false;
+		}
+	}
 
 
 }

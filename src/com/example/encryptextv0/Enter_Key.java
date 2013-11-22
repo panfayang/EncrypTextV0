@@ -30,31 +30,34 @@ public class Enter_Key extends Activity {
 		getMenuInflater().inflate(R.menu.enter__key, menu);
 		return true;
 	}
-	
+
 	public void addAKey(View v)
 	{
-			addKeyToDb();
-			Toast.makeText(getApplicationContext(), "Key added", Toast.LENGTH_SHORT).show();
+		addKeyToDb();
 	}
-	
+
 	public void addKeyToDb()
 	{	
 		name =((EditText)findViewById(R.id.enterName));
 		key = ((EditText)findViewById(R.id.PasteKeyEdit));
-		Key_Manager keyManager = new Key_Manager(this);
-		keyManager.addKey(name.getText().toString(), key.getText().toString()); 
+		KeyParser kp = new KeyParser();
+
+		if (name.getText().toString().length()<1 || (!kp.checkValidKey(key.getText().toString()))){
+			Toast.makeText(getApplicationContext(), "Invalid key name or key, key not added", Toast.LENGTH_SHORT).show();
+		}
+		else{
+			Key_Manager keyManager = new Key_Manager(this);
+			keyManager.addKey(name.getText().toString(), key.getText().toString());
+			Toast.makeText(getApplicationContext(), "Key added", Toast.LENGTH_SHORT).show();
+		} 
 	}
-	
+
 	public String newKey(){
 		KeyParser kp = new KeyParser();
 		return kp.parseToString(kp.randomKeyGenerator());
 	}
-	
+
 	public void randomKey (View view){
 		((EditText) findViewById(R.id.PasteKeyEdit)).setText(newKey());
 	}
-	
-	
-	
-	
 }

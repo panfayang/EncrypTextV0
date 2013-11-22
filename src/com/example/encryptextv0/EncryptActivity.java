@@ -74,6 +74,7 @@ public class EncryptActivity extends Activity {
 	public void paste(View view) {
 		String pasteData = "";
 		ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+		
 		if(!clipboard.hasPrimaryClip()) {
 			Toast toast = Toast.makeText(this, "Nothing copied", Toast.LENGTH_SHORT);
 			toast.show();

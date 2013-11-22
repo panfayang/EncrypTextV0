@@ -44,12 +44,12 @@ public class SecurityQn extends DialogFragment {
 					ePrefs = getActivity().getSharedPreferences("com.example.encryptextv0", Context.MODE_PRIVATE);
 					String ans;
 					try{
-					ans = ((EditText) view.findViewById(R.id.securityAns)).getText().toString();
+					ans = ((EditText) view.findViewById(R.id.securityAnsCheck)).getText().toString();
 					}
 					catch(Exception e){
-					ans = "";	
+					ans = null;	
 					}
-					String rightAns = ePrefs.getString("securityAns", " ");
+					String rightAns = ePrefs.getString("securityAns", "");
 
 					if (ans.equals(rightAns)){
 						Toast.makeText( getActivity(), "answer is right, your password was: " + ePrefs.getString("password", ""), Toast.LENGTH_SHORT).show();

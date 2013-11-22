@@ -37,14 +37,12 @@ public class NewPassword extends DialogFragment {
 				public void onClick(DialogInterface dialog, int id){
 					String pw = ((EditText) view.findViewById(R.id.newpw)).getText().toString();
 					String pwAgain = ((EditText) view.findViewById(R.id.newpwAgain)).getText().toString();
-//					String emailAddress = ((EditText) view.findViewById(R.id.emailAddress)).getText().toString();
 					String qn = ((EditText) view.findViewById(R.id.securityQn)).getText().toString();
 					String ans = ((EditText) view.findViewById(R.id.securityAns)).getText().toString();
 
 					if (pw.equals(pwAgain)){
 						ePrefs = getActivity().getSharedPreferences("com.example.encryptextv0", Context.MODE_PRIVATE);
 						ePrefs.edit().putString("password", pw).commit();
-//						ePrefs.edit().putString("email", emailAddress).commit();
 						ePrefs.edit().putString("securityQn", qn).commit();
 						ePrefs.edit().putString("securityAns", ans).commit();
 
@@ -55,8 +53,6 @@ public class NewPassword extends DialogFragment {
 					else{
 						Toast.makeText( getActivity(), "Passwords did not match, please try again", Toast.LENGTH_SHORT).show();
 					}
-					
-					
 				}
 			})
 			.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {

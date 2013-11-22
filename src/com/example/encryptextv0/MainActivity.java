@@ -17,7 +17,6 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends FragmentActivity {
 
@@ -50,7 +49,7 @@ public class MainActivity extends FragmentActivity {
 	public void startManageKeysActivity(View view) {
 		ePrefs = getSharedPreferences("com.example.encryptextv0", MODE_PRIVATE);
 		String pword = ePrefs.getString("password", null);
-		Toast.makeText(getApplicationContext(), pword, Toast.LENGTH_SHORT).show();
+//		Toast.makeText(getApplicationContext(), pword, Toast.LENGTH_SHORT).show();
 		if (pword!=null){
 			enterPassword(view);
 		}
@@ -101,7 +100,7 @@ public class MainActivity extends FragmentActivity {
 		//do decryption		
 		final TextView pw = new TextView(this);
 		pw.setText("right!");
-		
+		pw.setTextSize(20);
 		
 		new AlertDialog.Builder(this)
 			.setTitle(R.string.right)
@@ -135,7 +134,6 @@ public class MainActivity extends FragmentActivity {
 						FragmentManager fm = getSupportFragmentManager();
 						SecurityQn np = new SecurityQn();
 						np.show(fm, "Security Qn");
-//						Toast.makeText(getApplicationContext(), "An email with password will be sent", Toast.LENGTH_SHORT).show();
 					}
 			   })
 			.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
