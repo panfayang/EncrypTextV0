@@ -70,9 +70,8 @@ public final class R {
         public static final int activity_main=0x7f030006;
         public static final int activity_manage_keys=0x7f030007;
         public static final int activity_new_password=0x7f030008;
-        public static final int activity_password_manager=0x7f030009;
-        public static final int activity_security_qn=0x7f03000a;
-        public static final int activity_view__list=0x7f03000b;
+        public static final int activity_security_qn=0x7f030009;
+        public static final int activity_view__list=0x7f03000a;
     }
     public static final class menu {
         public static final int decrypt=0x7f070000;
