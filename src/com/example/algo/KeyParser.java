@@ -62,6 +62,13 @@ public class KeyParser {
 					return false;
 				}
 			}
+			
+//			for (char c: string.toCharArray()){
+//				int temp = (int) c;
+//				if (temp<48 || temp>57 || temp != 44 || temp!= 124){
+//					return false;
+//				}
+//			}
 			return true;
 		}
 		catch(Exception e){

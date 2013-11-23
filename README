@@ -1,1 +1,19 @@
-Mobile Computing project
+Final Mobile Computing project
+For COMP 489 Mobile Computing class, Fall 2013, Kalamazoo College,
+Professors: Pam Cutter and Alyce Brady
+
+by Fayang Pan, Sam Evans-Golden, and Kevin Davison
+
+This app extends Caesar Cipher. Instead of a single integer defining the number of rotations of 
+all the characters, the simples key has two dimensions: the starting index and the number of 
+rotations. The app can generate up to ten simples keys in a row with different starting indices 
+and different numbers of rotations and combine these ten keys to make a key that is way harder 
+to find out by brutal force. 
+
+Currently, this app can only decrypt/encrypt texts in English language, as the internal rotation 
+uses ASCII ordering as numberical representation of every character. For any character that is 
+not in ASCII, it will not be encrypted or decrypted.
+
+The user should add keys with unique names. When the user wishes to encrypt/decrypt, the app will 
+pop out an AlertDialog asking for the name of the key. If the name exists in the database of saved 
+keys, the key associated with that name will be the key for encryption/decryption.

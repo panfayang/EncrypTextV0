@@ -26,14 +26,14 @@ public final class R {
     }
     public static final class id {
         public static final int Enter=0x7f080011;
-        public static final int ListView1=0x7f08001f;
+        public static final int ListView1=0x7f08001d;
         public static final int PasteDecrypted=0x7f080002;
         public static final int PasteKey=0x7f080010;
         public static final int PasteKeyEdit=0x7f08000f;
         public static final int PasteNormal=0x7f080007;
         public static final int RelativeLayout1=0x7f08000b;
         public static final int ViewKeys=0x7f080013;
-        public static final int action_settings=0x7f080020;
+        public static final int action_settings=0x7f08001e;
         public static final int addKey=0x7f080012;
         public static final int buttonDecrypt=0x7f080015;
         public static final int buttonDoDecrypt=0x7f080001;
@@ -48,16 +48,14 @@ public final class R {
         public static final int enterName=0x7f08000c;
         public static final int generateRandomKey=0x7f08000e;
         public static final int name=0x7f08000d;
-        public static final int newpw=0x7f080019;
-        public static final int newpwAgain=0x7f08001a;
-        public static final int securityAns=0x7f08001c;
-        public static final int securityAnsCheck=0x7f08001e;
-        public static final int securityQn=0x7f08001b;
-        public static final int securityQnCheck=0x7f08001d;
-        public static final int storeKey=0x7f080018;
+        public static final int newpw=0x7f080017;
+        public static final int newpwAgain=0x7f080018;
+        public static final int securityAns=0x7f08001a;
+        public static final int securityAnsCheck=0x7f08001c;
+        public static final int securityQn=0x7f080019;
+        public static final int securityQnCheck=0x7f08001b;
         public static final int textViewDecrypted=0x7f080003;
         public static final int textViewEncrypted=0x7f080008;
-        public static final int viewKeyTV=0x7f080017;
     }
     public static final class layout {
         public static final int activity_decrypt=0x7f030000;
@@ -67,10 +65,9 @@ public final class R {
         public static final int activity_enter__key=0x7f030004;
         public static final int activity_key_app=0x7f030005;
         public static final int activity_main=0x7f030006;
-        public static final int activity_manage_keys=0x7f030007;
-        public static final int activity_new_password=0x7f030008;
-        public static final int activity_security_qn=0x7f030009;
-        public static final int activity_view__list=0x7f03000a;
+        public static final int activity_new_password=0x7f030007;
+        public static final int activity_security_qn=0x7f030008;
+        public static final int activity_view__list=0x7f030009;
     }
     public static final class menu {
         public static final int decrypt=0x7f070000;
