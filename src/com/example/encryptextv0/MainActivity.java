@@ -125,6 +125,7 @@ public class MainActivity extends FragmentActivity {
 		//do decryption		
 		final TextView pw = new TextView(this);
 		pw.setText("wrong!");
+		pw.setTextSize(20);
 		
 		new AlertDialog.Builder(this)
 			.setTitle(R.string.wrong)

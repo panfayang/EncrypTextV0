@@ -24,8 +24,6 @@ public class NewPassword extends DialogFragment {
 		LayoutInflater inflater = getActivity().getLayoutInflater();
 		final View view = inflater.inflate(R.layout.activity_new_password, null);
 		
-		
-		
 		// Inflate and set the layout for the dialog
 		// Pass null as the parent view because its going in the dialog layout
 

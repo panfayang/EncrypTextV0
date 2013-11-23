@@ -15,63 +15,63 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class SecurityQn extends DialogFragment {
-	
+
 	SharedPreferences ePrefs;
-	
+
 	@Override
 	public Dialog onCreateDialog(Bundle saveInstanceState){
 		ePrefs = getActivity().getSharedPreferences("com.example.encryptextv0", Context.MODE_PRIVATE);
 		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 		// Get the layout inflater 
 		LayoutInflater inflater = getActivity().getLayoutInflater();
-	    final View view = inflater.inflate(R.layout.activity_security_qn, null);
-	    builder.setView(view);
+		final View view = inflater.inflate(R.layout.activity_security_qn, null);
+		builder.setView(view);
 		TextView tv = (TextView)view.findViewById(R.id.securityQnCheck);
-		tv.setText("Your security qn: \n" + ePrefs.getString("securityQn", "no question specified"));
-//		final View view = inflater.inflate(R.layout.activity_security_qn, null);
-		
-		
-		
+		tv.setText("Your security qn: \n" + ePrefs.getString("securityQn", "error: no question specified"));
+		//		final View view = inflater.inflate(R.layout.activity_security_qn, null);
+
+
+
 		// Inflate and set the layout for the dialog
 		// Pass null as the parent view because its going in the dialog layout
 
 		builder.setView(view)
 		// Add action buttons
-		
-			.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener(){
-				@Override
-				public void onClick(DialogInterface dialog, int id){
-					ePrefs = getActivity().getSharedPreferences("com.example.encryptextv0", Context.MODE_PRIVATE);
-					String ans;
-					try{
-					ans = ((EditText) view.findViewById(R.id.securityAnsCheck)).getText().toString();
-					}
-					catch(Exception e){
-					ans = null;	
-					}
-					String rightAns = ePrefs.getString("securityAns", "");
 
-					if (ans.equals(rightAns)){
-						Toast.makeText( getActivity(), "answer is right, your password was: " + ePrefs.getString("password", ""), Toast.LENGTH_SHORT).show();
-						Intent intent = new Intent(getActivity(), KeyApp.class);
-				    	startActivity(intent);
-					}
-					else{
-						Toast.makeText( getActivity(), "Wrong answer, please try again", Toast.LENGTH_SHORT).show();
-					}
-					
-					
+		.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener(){
+			@Override
+			public void onClick(DialogInterface dialog, int id){
+				ePrefs = getActivity().getSharedPreferences("com.example.encryptextv0", Context.MODE_PRIVATE);
+				String ans;
+				try{
+					ans = ((EditText) view.findViewById(R.id.securityAnsCheck)).getText().toString();
 				}
-			})
-			.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int id){
-					SecurityQn.this.getDialog().cancel();
+				catch(Exception e){
+					ans = null;	
 				}
-					
-			});
-		
+				String rightAns = ePrefs.getString("securityAns", "");
+
+				if (ans.equals(rightAns)){
+					Toast.makeText( getActivity(), "answer is right, your password was: " + ePrefs.getString("password", ""), Toast.LENGTH_SHORT).show();
+					Intent intent = new Intent(getActivity(), KeyApp.class);
+					startActivity(intent);
+				}
+				else{
+					Toast.makeText( getActivity(), "Wrong answer, please try again", Toast.LENGTH_SHORT).show();
+				}
+
+
+			}
+		})
+		.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int id){
+				SecurityQn.this.getDialog().cancel();
+			}
+
+		});
+
 		return builder.create();
 	}
-	
-	
+
+
 }

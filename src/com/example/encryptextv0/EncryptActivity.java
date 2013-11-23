@@ -85,7 +85,7 @@ public class EncryptActivity extends Activity {
 		}
 		else {
 			ClipData.Item item = clipboard.getPrimaryClip().getItemAt(0);
-			pasteData = (String) item.getText();
+			pasteData = item.getText().toString();
 			
 			if(pasteData != null) {
 				EditText edit = (EditText) findViewById(R.id.editTextEncrypted);
