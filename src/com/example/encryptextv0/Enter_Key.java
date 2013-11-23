@@ -42,7 +42,7 @@ public class Enter_Key extends Activity {
 		key = ((EditText)findViewById(R.id.PasteKeyEdit));
 		KeyParser kp = new KeyParser();
 
-		if (name.getText().toString().length()<1 || (!kp.checkValidKey(key.getText().toString()))){
+		if (name.getText().toString().length()<1 || (!kp.checkValidKey(key.getText().toString()))||key.getText().toString().length()<3){
 			Toast.makeText(getApplicationContext(), "Invalid key name or key, key not added", Toast.LENGTH_SHORT).show();
 		}
 		else{

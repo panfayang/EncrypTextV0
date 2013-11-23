@@ -3,6 +3,7 @@ For COMP 489 Mobile Computing class, Fall 2013, Kalamazoo College,
 Professors: Pam Cutter and Alyce Brady
 
 by Fayang Pan, Sam Evans-Golden, and Kevin Davison
+Nov 23, 2013
 
 This app extends Caesar Cipher. Instead of a single integer defining the number of rotations of 
 all the characters, the simples key has two dimensions: the starting index and the number of 

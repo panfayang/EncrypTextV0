@@ -18,7 +18,7 @@ public class KeyParser {
 	public ArrayList<Key> parseToKey (String keyString){
 		ArrayList<Key> keyKey = new ArrayList<Key>();
 		for (String keyPair:keyString.split("[|]")){
-			if (keyPair.length()>3){
+			if (keyPair.length()>2){
 				int start = Integer.parseInt(keyPair.split(",")[0]);
 				int twist = Integer.parseInt(keyPair.split(",")[1]);
 				Key tempKeyPair = new Key(start, twist);
@@ -62,13 +62,7 @@ public class KeyParser {
 					return false;
 				}
 			}
-			
-//			for (char c: string.toCharArray()){
-//				int temp = (int) c;
-//				if (temp<48 || temp>57 || temp != 44 || temp!= 124){
-//					return false;
-//				}
-//			}
+
 			return true;
 		}
 		catch(Exception e){

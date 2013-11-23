@@ -1,3 +1,9 @@
+/**
+ * @author Kevin Davison, Sam Evans-Golden, Fayang Pan
+ * 
+ * This class set the dialog for setting up a new password.
+ */
+
 package com.example.encryptextv0;
 
 import android.app.AlertDialog;

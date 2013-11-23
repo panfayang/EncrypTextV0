@@ -1,3 +1,11 @@
+/**
+ * @author Kevin Davison, Sam Evans-Golden, Fayang Pan
+ * 
+ * This class sets up the list view for all entries in 
+ * the database of name-key pairs. It implements a 
+ * library we found on github, call swipe-dismiss, 
+ * developed by Google.
+ */
 package com.example.encryptextv0;
 
 import java.util.ArrayList;

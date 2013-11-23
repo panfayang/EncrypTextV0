@@ -1,3 +1,10 @@
+/**
+ * @author Kevin Davison, Sam Evans-Golden, Fayang Pan
+ * 
+ * This class sets up a dialog for the user to answer 
+ * the security question he/she set up.
+ */
+
 package com.example.encryptextv0;
 
 import android.app.AlertDialog;
